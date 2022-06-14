@@ -1,0 +1,92 @@
+body {
+    /* background-color: hsla(0, 0%, 66%, 1); */
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+/* --Header-- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsla(0, 0%, 66%, 1);
+    
+}
+
+header h1 {
+    margin-left: 3rem;
+}
+
+nav {
+    margin-right: 2rem;
+}
+
+nav li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+
+/* --About-me Section-- */
+#about-me {
+    display: flex;
+    text-align: left;
+    background-image: url("./Images/Profile_pic.jpg");
+    background-size: cover;
+    height: 600px;
+}
+
+#about {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 400px;
+    align-self: center;
+    background-color: hsla(0, 0%, 66%, .7);
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+
+/* --Projects Section-- */
+#projects {
+    /* background-color: green; */
+}
+
+#each-project {
+    display: flex;
+    justify-content: space-around;
+    
+    padding-top: 2rem;
+}
+
+#each-project div {
+    max-width: 300px;
+}
+
+#each-project img {
+    width: 300px;
+}
+
+
+/* --Hobbies Section-- */
+#hobbies {
+    background-color: plum;
+}
+
+.hobbies {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+
+
+/* --Footer-- */
+footer {
+    background-color: hsla(0, 0%, 66%, 1);
+}
