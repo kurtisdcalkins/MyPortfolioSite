@@ -44,16 +44,17 @@ nav li {
 }
 
 
-/* --About-me Section-- */
-#about-me {
+/* --About-me/Contact-me Section-- */
+#about-me, #contact-me {
     display: flex;
     text-align: left;
     background-image: url("./Images/Profile_pic.jpg");
     background-size: cover;
     height: 600px;
+    
 }
 
-#about {
+#about, #contact {
     margin-left: 3rem;
     padding-left: 2rem;
     padding-right: 2rem;
@@ -62,8 +63,19 @@ nav li {
     background-color: hsla(0, 0%, 46%, .6);
     border-radius: 10px;
     font-size: 18px;
+    animation: bounceIn 1s;
 }
 
+#contact div {
+    display: flex;
+    flex-direction: row;
+    margin-left: 0rem;
+}
+
+#contact a {
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+}
 
 /* --Projects Section-- */
 #projects {
@@ -75,7 +87,7 @@ nav li {
 #each-project {
     display: flex;
     justify-content: space-around;
-    animation: bounceIn 1s;
+    
     padding-top: 2rem;
     /* display: none; */
 }
@@ -96,14 +108,13 @@ nav li {
 }
 
 /* --Hobbies Section-- */
-#hobbies {
-    display: none;
+#skills {
     background-color: plum;
+    border: solid 1px plum;
 }
 
-.hobbies {
-    display: flex;
-    
+.skills {
+    display: flex;   
     justify-content: space-around;
 }
 
@@ -115,4 +126,6 @@ nav li {
 footer {
     background-color: hsla(0, 0%, 46%, 1);
     border: 1px solid hsla(0, 0%, 46%, 1);
+    text-align: left;
+    padding-left: 2rem;
 } 
