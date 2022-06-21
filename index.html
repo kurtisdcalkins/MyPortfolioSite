@@ -3,12 +3,14 @@
     <head>
         <title>My Portfolio Website</title>
         <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
     </head>
     <body>
         <header>
             <h1>Kurtis Calkins</h1>
             <nav>
                 <li><a href="#">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="#">Resume</a></li>
@@ -17,48 +19,56 @@
         <section id="about-me">
             <div id="about">
                 <h2>About Me</h2>
-                <p>Hello! I am Kurtis and I am from Colorado (North-Metro Denver). I have a BS in Mechanical Engineering from the University of Colorado at Denver. I have worked as a manufacturing engineer, primarily in the medical device industry, since 2015. </p>
+                <p>Hello! I am Kurtis and I am from Colorado (North Metro-Denver). I have a BS in Mechanical Engineering from the University of Colorado at Denver. I have worked as a manufacturing engineer, primarily in the medical device industry, since 2015. </p>
                 <p>I am looking to switch careers into software development. Programming has intrigued me for years. With a few of the software projects I've been able to work on throughout my career piqueing my interest and excitement, I have decided to persue software development.</p>
                 <p>The goals of this website are to display my work and demonstrate some of the skills I have learned.</p>
             </div>
         </section>
         <section id="skills">
-            <h2>Programming Skills</h2>
-            <div class="skills">
+            <h2 id="prog-skills">Programming Skills</h2>
+            <div class="skills" id="programming-skills">
                 <div id="python">
-                    <h3>Python</h3>
+                    <p>Python</p>
                 </div>
                 <div id="sql">
-                    <h3>SQL</h3>
+                    <p>SQL</p>
                 </div>
                 <div id="html-css">
-                    <h3>HTML/CSS</h3>
+                    <p>HTML/CSS</p>
                 </div>
                 <div id="javascript">
-                    <h3>JavaScript</h3>
+                    <p>JavaScript</p>
                 </div>
                 <div id="git">
-                    <h3>Git</h3>
+                    <p>Git</p>
                 </div>
                 <div id="cli">
-                    <h3>Command Line</h3>
+                    <p>Command Line</p>
                 </div>
             </div>
             <h2>Other Skills</h2>
-            <div class="skills">
+            <div class="skills" id="other-skills">
                 <div id="cad">
-                    <h3>CAD: Solidworks and Fuson360</h3>
+                    <p>CAD: Solidworks and Fuson360</p>
                 </div>
                 <div id="spreadsheet">
-                    <h3>Spreadsheets: Excel and Google Sheets</h3>
+                    <p>Spreadsheets: Excel and Google Sheets</p>
                 </div>
                 <div id="lean">
-                    <h3>Lean Manufacturing</h3>
+                    <p>Word and Google Docs</p>
+                </div>
+                <div id="github">
+                    <p>GitHub</p>
                 </div>
             </div>
         </section>
         <section id="projects">
-            <h2>Projects</h2>
+            <div class="heading">
+                <p class="triangle-down"></p>
+                <h2>    Projects    </h2>
+                <p class="triangle-down"></p>
+            </div>
+            
             <div id="each-project">
                 <div class="projects" id="project1">
                     <h3>Terminal Recommendation Program</h3>

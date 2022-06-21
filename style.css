@@ -1,3 +1,5 @@
+
+/* --Main Content-- */
 body {
     /* background-color: hsla(0, 0%, 66%, 1); */
     text-align: center;
@@ -7,6 +9,31 @@ body {
     font-family: sans-serif;
 }
 
+h2 {
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    opacity: .7;
+}
+
+section, header {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+section {
+    box-shadow: 3px 3px 5px;
+}
+
+
+/* --Animations-- */
 @keyframes bounceIn {
     0% {
       transform: scale(0.1);
@@ -21,13 +48,32 @@ body {
     }
 }
 
+@keyframes moveUpDown {
+    
+    0% {
+        transform: translateY(10px);
+    }
+    33% {
+        transform: translateY(5px);
+        opacity: .7;
+    }
+    67% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+
+
+
 /* --Header-- */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: hsla(0, 0%, 66%, 1);
-    
+    background-image: linear-gradient(to right, hsla(0, 0%, 86%, 1), hsla(0, 0%, 66%, 1));
 }
 
 header h1 {
@@ -42,6 +88,7 @@ nav li {
     display: inline;
     margin-right: 1rem;
 }
+
 
 
 /* --About-me/Contact-me Section-- */
@@ -77,19 +124,18 @@ nav li {
     padding-bottom: 2rem;
 }
 
+
+
 /* --Projects Section-- */
 #projects {
-    
-    background-color: hsla(0, 0%, 66%, 1);
-    border: solid .5px hsla(0, 0%, 66%, 1);
+    background-image: radial-gradient(hsla(0, 0%, 36%, 1), hsla(0, 0%, 76%, 1));
 }
 
 #each-project {
-    display: flex;
+    display: none;
     justify-content: space-around;
-    
+    animation: bounceIn .5s;
     padding-top: 2rem;
-    /* display: none; */
 }
 
 
@@ -107,25 +153,68 @@ nav li {
     max-width: 390px;
 }
 
-/* --Hobbies Section-- */
+.heading {
+    display: inline-flex;
+    justify-content: space-between;
+    
+}
+
+.triangle-down {
+    padding: auto 25px;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 20px solid hsla(0, 0%, 6%);
+    animation: moveUpDown 1s ease-in-out 2s infinite;
+}
+
+
+/* --Skills Section-- */
 #skills {
-    background-color: plum;
-    border: solid 1px plum;
+    background-image: linear-gradient(to bottom,hsl(208, 100%, 57%, 1),hsla(208, 100%, 57%,.7));
 }
 
 .skills {
     display: flex;   
     justify-content: space-around;
+    
 }
 
-
+.skills p {
+    padding: .5rem 1rem;
+    background-color: hsla(0, 0%, 76%, 1);
+    color: 	hsl(208, 100%, 17%);
+    border: 1px solid black;
+    border-radius: 5px;
+    font-weight: bold;
+}
 
 
 
 /* --Footer-- */
 footer {
     background-color: hsla(0, 0%, 46%, 1);
-    border: 1px solid hsla(0, 0%, 46%, 1);
+    border: 1px solid black;
+    border-radius: 5px;
     text-align: left;
     padding-left: 2rem;
-} 
+}
+
+
+
+/* --For Smaller Screen Sizes-- */
+@media only screen and (max-width: 940px) {
+    .skills p {
+        font-size: .75rem;
+    }
+    .images img {
+        max-width: 250px;
+    }
+    .projects {
+        max-width: 270px;
+    }
+    .images {
+        height: 350px;
+    }
+}

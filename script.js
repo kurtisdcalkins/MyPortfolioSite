@@ -1,11 +1,11 @@
 let project = document.querySelector('#each-project');
-// let projects = document.querySelector('#projects');
+let projects = document.querySelector('#projects');
+let arrows = document.querySelectorAll('.triangle-down');
 
-// function viewProjects(event) {
-//     event.target.style.display = 'flex';
+function viewProjects() {
+    project.style.display = 'flex';
+    arrows[0].hidden = true;
+    arrows[1].hidden = true;
+}
 
-// }
-
-// project.onmouseover = viewProjects;
-
-project.addEventListener('click', project.style.display = 'none');
+projects.onmouseover = viewProjects;
