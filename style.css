@@ -1,5 +1,10 @@
 
 /* --Main Content-- */
+html {
+    margin: 0;
+    background-image: url("./Images/2560x1440-blue-stained-glass-free-website-background-image.jpg");
+}
+
 body {
     /* background-color: hsla(0, 0%, 66%, 1); */
     text-align: center;
@@ -22,13 +27,10 @@ a:hover {
     opacity: .7;
 }
 
-section, header {
+section, header, footer {
     border: 1px solid black;
     border-radius: 5px;
     margin: 10px 0;
-}
-
-section {
     box-shadow: 3px 3px 5px;
 }
 
@@ -111,6 +113,7 @@ nav li {
     border-radius: 10px;
     font-size: 18px;
     animation: bounceIn 1s;
+    box-shadow: inset 0px 0px 6px;
 }
 
 #contact div {
@@ -126,9 +129,50 @@ nav li {
 
 
 
+/* --Skills Section-- */
+#skills {
+    background-image: linear-gradient(to right, hsla(0, 0%, 86%, 1), hsla(0, 0%, 66%, 1));
+    /* background-image: linear-gradient(to bottom,hsl(208, 100%, 57%, 1),hsla(208, 100%, 57%,.7)); */
+}
+
+.skills {
+    display: flex;   
+    justify-content: space-around;
+    
+}
+
+.skills div {
+    padding: 0 1rem;
+    background-color: hsla(0, 0%, 76%, 1);
+    color: 	hsl(208, 100%, 17%);
+    border: 1px solid black;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: inset 0px 0px 4px;
+}
+
+.fa-brands, .fa-solid {
+    font-size: 2rem;
+}
+
+
+#other-skills img {
+    height: 3vw;
+    width: 5vw;
+    object-fit: scale-down;
+    margin-bottom: -1.5rem;
+}
+
+#other-skills div {
+    margin-bottom: 1em;
+    text-align: center;   
+}
+
+
 /* --Projects Section-- */
 #projects {
-    background-image: radial-gradient(hsla(0, 0%, 36%, 1), hsla(0, 0%, 76%, 1));
+    background-image: linear-gradient(to right, hsla(0, 0%, 86%, 1), hsla(0, 0%, 66%, 1));
+    /* background-image: radial-gradient(hsla(0, 0%, 36%, 1), hsla(0, 0%, 76%, 1)); */
 }
 
 #each-project {
@@ -166,35 +210,14 @@ nav li {
 	border-left: 10px solid transparent;
 	border-right: 10px solid transparent;
 	border-top: 20px solid hsla(0, 0%, 6%);
-    animation: moveUpDown 1s ease-in-out 2s infinite;
-}
-
-
-/* --Skills Section-- */
-#skills {
-    background-image: linear-gradient(to bottom,hsl(208, 100%, 57%, 1),hsla(208, 100%, 57%,.7));
-}
-
-.skills {
-    display: flex;   
-    justify-content: space-around;
-    
-}
-
-.skills p {
-    padding: .5rem 1rem;
-    background-color: hsla(0, 0%, 76%, 1);
-    color: 	hsl(208, 100%, 17%);
-    border: 1px solid black;
-    border-radius: 5px;
-    font-weight: bold;
+    animation: moveUpDown .5s ease-in-out 2s infinite;
 }
 
 
 
 /* --Footer-- */
 footer {
-    background-color: hsla(0, 0%, 46%, 1);
+    background-image: linear-gradient(to right, hsla(0, 0%, 86%, 1), hsla(0, 0%, 66%, 1));
     border: 1px solid black;
     border-radius: 5px;
     text-align: left;
