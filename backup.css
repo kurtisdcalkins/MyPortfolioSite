@@ -1,0 +1,218 @@
+html {
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: black;
+    width: 100vw;
+}
+
+body {
+    /* position: relative; */
+    overflow-x: hidden;
+    display: block;
+}
+
+
+
+/* --- header --- */
+header {
+    margin-top: 1rem;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(to right, hsl(240, 100%, 30%), hsl(240, 100%, 70%));
+    padding: 1rem;
+    align-items: center;
+    position: fixed;
+    left: 5rem;
+    right: 5rem;
+    z-index: 10;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.name-city {
+    margin-right: 15rem;
+    text-align: right;
+}
+
+.name-city > p {
+    font-size: 1.25rem;
+    padding-left: 2rem;
+}
+
+.contact {
+    margin-left: 15rem;
+}
+
+.contact > h2 {
+    color: white;
+    font-size: 2rem;
+}
+
+.contact > * {
+    color: white;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-details > p {
+    margin-left: 10px;
+}
+
+
+
+
+
+
+/* ----- Main Content Layout ----- */
+main {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    margin: 10rem 10rem;
+    background-color: white;
+}
+
+section {
+    
+}
+
+.main-content {
+    /* position: relative; */
+    top: 15rem;
+    width: 90%;
+    margin: 0 25rem;
+    z-index: 1;
+}
+
+.profile {
+    width: 100%;
+    overflow-x: hidden;
+    position: absolute;
+    right: 10rem;
+    left: 50rem;
+    z-index: -1;
+}
+
+.profile-pic {
+    object-fit: cover;
+    object-position: right;
+    width: 100%;
+    height: 100%;
+}
+
+.division {
+    border-top: 1px solid;
+    padding: 1rem;
+}
+
+main h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
+/* ----- About Me Section ----- */
+#about-me {
+    border: none;
+    margin: 0 3rem;
+}
+
+
+#about-me > p {
+    text-align: left;
+}
+
+
+
+
+
+/* ----- Programming Skills ----- */
+.each-programming-skill, .each-other-skill, .each-project-div {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.each-skill {
+    padding: .5rem 1rem;
+    background-color: hsla(0, 0%, 76%, 1);
+    color: 	hsl(208, 100%, 17%);
+    border: 1px solid black;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: inset 0px 0px 4px;
+}
+
+.fa-brands, .fa-solid {
+    font-size: 2rem;
+}
+
+.each-skill > p {
+    margin: .5rem 0;
+}
+
+
+
+
+
+/* ----- Professional Skills ----- */
+.other-skill {
+    width: 30%;
+    padding: 0 .5rem .5rem;
+    background-color: hsla(0, 0%, 76%, 1);
+    color: 	hsl(208, 100%, 17%);
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 4px;
+    text-align: left;
+}
+
+h3 {
+    font-weight: bold;
+    margin: .5rem auto;
+}
+
+li {
+    list-style-type: square;
+    margin-left: 1.5rem;
+    font-size: .85rem;
+    line-height: 1.25rem;
+}
+
+
+
+
+/* ----- Projects ----- */
+.each-project-div {
+    display: grid;
+    grid-template-columns: auto auto
+}
+
+.each-project {
+    display: flex;
+    /* border: 1px solid; */
+    padding: .5rem;
+    margin: .25rem;
+}
+
+.project-details {
+    text-align: left;
+    padding: 0 .5rem .5rem;
+    background-color: hsla(0, 0%, 76%, 1);
+    color: 	hsl(208, 100%, 17%);
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 4px;
+}

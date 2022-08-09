@@ -1,243 +1,252 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
 
-/* --Main Content-- */
 html {
-    margin: 0;
-    background-image: url("./Images/2560x1440-blue-stained-glass-free-website-background-image.jpg");
+	font-size: 16px;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	position: fixed;
+	background-image: linear-gradient(to bottom, #fff, #000);
 }
 
 body {
-    /* background-color: hsla(0, 0%, 66%, 1); */
-    text-align: center;
-    max-width: 1000px;
-    margin: 0 auto;
-    box-sizing: border-box;
-    font-family: sans-serif;
 }
 
-h2 {
-    text-decoration: underline;
-}
-
-a {
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:hover {
-    opacity: .7;
-}
-
-section, header, footer {
-    border: 1px solid black;
-    border-radius: 5px;
-    margin: 10px 0;
-    box-shadow: 3px 3px 5px;
+section::-webkit-scrollbar {
+	display: none;
 }
 
 
-/* --Animations-- */
-@keyframes bounceIn {
-    0% {
-      transform: scale(0.1);
-      opacity: 0;
-    }
-    60% {
-      transform: scale(1.2);
-      opacity: 1;
-    }
-    100% {
-      transform: scale(1);
-    }
-}
-
-@keyframes moveUpDown {
-    
-    0% {
-        transform: translateY(10px);
-    }
-    33% {
-        transform: translateY(5px);
-        opacity: .7;
-    }
-    67% {
-        transform: translateY(10px);
-    }
-    100% {
-        transform: translateY(10px);
-    }
-}
-
-
-
-
-/* --Header-- */
+/* --- header --- */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-image: linear-gradient(to right, hsla(0, 0%, 86%, 1), hsla(0, 0%, 66%, 1));
+	margin: 1vh 4rem 0;
+	border-radius: 50px;
+	display: flex;
+	justify-content: space-between;
+	background-image: linear-gradient(to right, #151599, #2E2FE3);
+	padding: 1rem;
+	align-items: center;
+	height: 10vh;
 }
 
-header h1 {
-    margin-left: 3rem;
+h1 {
+	font-size: 3rem;
+	font-weight: bold;
 }
 
-nav {
-    margin-right: 2rem;
+.name-city {
+	margin-right: 12rem;
+	text-align: center;
+	opacity: 0.9;
+	color: #090934;
 }
 
-nav li {
-    display: inline;
-    margin-right: 1rem;
+.name-city>p {
+	font-size: 1.25rem;
 }
 
-
-
-/* --About-me/Contact-me Section-- */
-#about-me, #contact-me {
-    display: flex;
-    text-align: left;
-    background-image: url("./Images/Profile_pic.jpg");
-    background-size: cover;
-    height: 600px;
-    
+.contact {
+	margin-left: 15rem;
+	opacity: 0.8;
+	text-align: center;
 }
 
-#about, #contact {
-    margin-left: 3rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    max-width: 400px;
-    align-self: center;
-    background-color: hsla(0, 0%, 46%, .6);
-    border-radius: 10px;
-    font-size: 18px;
-    animation: bounceIn 1s;
-    box-shadow: inset 0px 0px 6px;
+.contact>h2 {
+	color: #8A8AEF;
+	font-size: 2rem;
 }
 
-#contact div {
-    display: flex;
-    flex-direction: row;
-    margin-left: 0rem;
+.contact-info {
+	display: flex;
+	margin-top: 10px;
+	font-size: 1.5rem;
+	color: #E0E0FB;
 }
 
-#contact a {
-    padding-right: 2rem;
-    padding-bottom: 2rem;
+.contact-details {
+	display: flex;
+	flex-direction: row;
 }
 
-
-
-/* --Skills Section-- */
-#skills {
-    background-image: linear-gradient(to right, hsla(0, 0%, 86%, 1), hsla(0, 0%, 66%, 1));
-    /* background-image: linear-gradient(to bottom,hsl(208, 100%, 57%, 1),hsla(208, 100%, 57%,.7)); */
+.contact-details:not(:last-child) {
+	margin-right: 22px;
 }
 
-.skills {
-    display: flex;   
-    justify-content: space-around;
-    
+/* .contact-details > p {
+    margin-left: 10px;
+} */
+
+
+
+
+
+
+/* ----- Main Content Layout ----- */
+main {
+	text-align: center;
+	display: grid;
+	grid-template-columns: 3fr 2fr;
+	margin: 0 10rem;
+	background-color: #E0E0FB;
+	height: 89vh;
 }
 
-.skills div {
-    padding: 0 1rem;
-    background-color: hsla(0, 0%, 76%, 1);
-    color: 	hsl(208, 100%, 17%);
-    border: 1px solid black;
-    border-radius: 5px;
-    font-weight: bold;
-    box-shadow: inset 0px 0px 4px;
+.main-content {
+	overflow: scroll;
+	padding: 0 2rem;
+	color: #090934;
 }
 
-.fa-brands, .fa-solid {
-    font-size: 2rem;
+.picture {
+	width: 100%;
+	height: 84vh;
 }
 
-
-#other-skills img {
-    height: 3vw;
-    width: 5vw;
-    object-fit: scale-down;
-    margin-bottom: -1.5rem;
+.profile-pic {
+	object-fit: cover;
+	object-position: right;
+	overflow: hidden;
+	width: 100%;
+	height: 89vh;
+	/* opacity: .8; */
 }
 
-#other-skills div {
-    margin-bottom: 1em;
-    text-align: center;   
+.division {
+	border-top: 1px solid;
+	padding: 1rem;
+	transition: 0.6s;
 }
 
-
-/* --Projects Section-- */
-#projects {
-    background-image: linear-gradient(to right, hsla(0, 0%, 86%, 1), hsla(0, 0%, 66%, 1));
-    /* background-image: radial-gradient(hsla(0, 0%, 36%, 1), hsla(0, 0%, 76%, 1)); */
+.division:hover {
+	transform: scale(1.04);
+	color: hsl(0, 0%, 0%);
 }
 
-#each-project {
-    display: none;
-    justify-content: space-around;
-    animation: bounceIn .5s;
-    padding-top: 2rem;
+main h2 {
+	font-size: 2rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
 }
 
-
-.projects {
-    max-width: 400px;
-    height: 750px;
-}
-
-.images {
-    overflow: scroll;
-    height: 500px;
-}
-
-.images img {
-    max-width: 390px;
-}
-
-.heading {
-    display: inline-flex;
-    justify-content: space-between;
-    
-}
-
-.triangle-down {
-    padding: auto 25px;
-	width: 0;
-	height: 0;
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	border-top: 20px solid hsla(0, 0%, 6%);
-    animation: moveUpDown .5s ease-in-out 2s infinite;
+.fade {
+	height: 88vh;
+	width: 32.3%;
+	position: absolute;
+	top: 12vh;
+	background-image: linear-gradient(to top, hsl(0, 0%, 10%), transparent);
+	pointer-events: none;
+	transition: all 0.6s;
+	margin-bottom: 0;
 }
 
 
 
-/* --Footer-- */
+
+/* ----- About Me Section ----- */
+#about-me {
+	border: none;
+	margin: 0 3rem;
+}
+
+#about-me>p {
+	text-align: left;
+	opacity: .9;
+}
+
+
+
+
+
+/* ----- Programming Skills ----- */
+.each-programming-skill,
+.each-other-skill,
+.each-project-div {
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem 0;
+}
+
+.each-skill {
+	padding: .5rem 1rem;
+	background-color: hsla(0, 0%, 76%, 1);
+	color: hsl(208, 100%, 17%);
+	border: 1px solid black;
+	border-radius: 5px;
+	font-weight: bold;
+	box-shadow: inset 0px 0px 4px;
+}
+
+.fa-brands,
+.fa-solid {
+	font-size: 2rem;
+}
+
+.each-skill>p {
+	margin: .5rem 0;
+}
+
+
+
+
+
+/* ----- Professional Skills ----- */
+.other-skill {
+	width: 30%;
+	padding: 0 .5rem .5rem;
+	background-color: hsla(0, 0%, 76%, 1);
+	color: hsl(208, 100%, 17%);
+	border: 1px solid black;
+	border-radius: 5px;
+	box-shadow: inset 0px 0px 4px;
+	text-align: left;
+}
+
+h3 {
+	font-weight: bold;
+	margin: .5rem auto;
+}
+
+li {
+	list-style-type: square;
+	margin-left: 1.5rem;
+	font-size: .85rem;
+	line-height: 1.25rem;
+}
+
+
+
+
+/* ----- Projects ----- */
+.each-project-div {
+	display: grid;
+	grid-template-columns: auto auto
+}
+
+.each-project {
+	display: flex;
+	/* border: 1px solid; */
+	padding: .5rem;
+	margin: .25rem;
+}
+
+.project-details {
+	text-align: left;
+	padding: 0 .5rem .5rem;
+	background-color: hsla(0, 0%, 76%, 1);
+	color: hsl(208, 100%, 17%);
+	border: 1px solid black;
+	border-radius: 5px;
+	box-shadow: inset 0px 0px 4px;
+}
+
+
 footer {
-    background-image: linear-gradient(to right, hsla(0, 0%, 86%, 1), hsla(0, 0%, 66%, 1));
-    border: 1px solid black;
-    border-radius: 5px;
-    text-align: left;
-    padding-left: 2rem;
-}
-
-
-
-/* --For Smaller Screen Sizes-- */
-@media only screen and (max-width: 940px) {
-    .skills p {
-        font-size: .75rem;
-    }
-    .images img {
-        max-width: 250px;
-    }
-    .projects {
-        max-width: 270px;
-    }
-    .images {
-        height: 350px;
-    }
+	height: 4vh;
+	width: 100%;
+	background-color: blue;
+	z-index: 10;
+	position: fixed;
+	bottom: 0rem;
 }

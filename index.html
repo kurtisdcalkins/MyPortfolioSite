@@ -1,112 +1,173 @@
 <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <title>My Portfolio Website</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js" defer></script>
-        <script src="https://kit.fontawesome.com/87cf5dbed3.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <header>
-            <h1>Kurtis Calkins</h1>
-            <nav>
-                <li><a href="#">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="#">Resume</a></li>
-            </nav>
-        </header>
-        <section id="about-me">
-            <div id="about">
-                <h2>About Me</h2>
-                <p>Hello! I am Kurtis and I am from Colorado (North Metro-Denver). I have a BS in Mechanical Engineering from the University of Colorado at Denver. I have worked as a manufacturing engineer, primarily in the medical device industry, since 2015. </p>
-                <p>I am looking to switch careers into software development. Programming has intrigued me for years. With a few of the software projects I've been able to work on throughout my career piqueing my interest and excitement, I have decided to persue software development.</p>
-                <p>The goals of this website are to display my work and demonstrate some of the skills I have learned.</p>
-            </div>
-        </section>
-        <section id="skills">
-            <h2 id="prog-skills">Programming Skills</h2>
-            <div class="skills" id="programming-skills">
-                <div id="python">
-                    <p><i class="fa-brands fa-python"></i><br>Python</p>
-                </div>
-                <div id="sql">
-                    <p><i class="fa-solid fa-database"></i><br>SQL</p>
-                </div>
-                <div id="css">
-                    <p><i class="fa-brands fa-css3-alt"></i><br>CSS</p>
-                </div>
-                <div id="css">
-                    
-                    <p><i class="fa-brands fa-html5"></i><br>HTML</p>
-                </div>
-                <div id="javascript">
-                    <p><i class="fa-brands fa-js"></i><br>JavaScript</p>
-                </div>
-                
-                <div id="git">
-                    <p><i class="fa-brands fa-git-alt"></i><br>Git</p>
-                </div>
-                <div id="github">
-                    <p><i class="fa-brands fa-github-square"></i><br>GitHub</p>
-                </div>
-                <div id="cli">
-                    <p><i class="fa-solid fa-terminal"></i><br>Terminal</p>
-                </div>
-            </div>
-            <h2>Other Skills</h2>
-            <div class="skills" id="other-skills">
-                <div id="sw">
-                    <img src="./Images/solidworks-icon-24.png">
-                    <p>Solidworks</p>
-                </div>
-                <div id="fusion">
-                    <img src="./Images/Fusion360_Logo.png">
-                    <p>Fusion360</p>
-                </div>
-                <div id="office">
-                    <img src="./Images/Office_365_logo_(2013-2019).png">
-                    <p>Office 365</p>
-                </div>
-                <div id="gsuite">
-                    <img src="./Images/Gsuite-logo.png">
-                    <p>Google Suite</p>
-                </div>
-            </div>
-        </section>
-        <section id="projects">
-            <div class="heading">
-                <p class="triangle-down"></p>
-                <h2>    Projects    </h2>
-                <p class="triangle-down"></p>
-            </div>
-            
-            <div id="each-project">
-                <div class="projects" id="project1">
-                    <h3>Terminal Recommendation Program</h3>
-                    <div class="images">
-                        <img src="./Images/Rental Car Program.png" alt="Displays the command line inputs and outputs">
-                    </div>
-                    <p>This program was created to fulfill requirements of Codecademy's Computer Science CS102: Data Structures and Algorithms final project. The program uses a linked list data structure for storing and looking up data based upon the user's inputs.</p>
-                </div>
-                <div class="projects" id="project2">
-                    <h3>Monster Truck Racing Terminal Game</h3>
-                    <div class="images">
-                        <img src="./Images/Monster Truck Program.png">
-                    </div>
-                    <p>This program was created to fulfill requirements of Codecademy's Computer Science CS101: Introduction to Programming final project. The program uses classes and control-flow.</p>
-                </div>
-                <!-- <div id="project3">
-                    <h3>Project Name</h3>
-                    <img src="">
-                    <p></p>
-                </div> -->
-            </div>    
-            </section>
-        
-        <footer>
-            <p>Last Update: June 2022</p>
-        </footer>
-    </body>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Kurtis-Portfolio Website</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./style.css">
+	<script src="https://kit.fontawesome.com/87cf5dbed3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<header>
+		<div class="contact" id="contact">
+			<h2>Contact</h2>
+			<div class="contact-info">
+				<div class="contact-details">
+					<i class="fa fa-envelope-square" aria-hidden="true"></i>
+					<!-- <p>kurtiscalkins@yahoo.com</p>  -->
+				</div>
+				<div class="contact-details">
+					<i class="fa fa-phone" aria-hidden="true"></i>
+					<!-- <p>(720)988-4295</p> -->
+				</div>
+				<div class="contact-details">
+					<i class="fa fa-linkedin" aria-hidden="true"></i>
+					<!-- <p>linkedin.com/in/kurtis-calkins</p> -->
+				</div>
+				<div class="contact-details">
+					<i class="fa fa-github" aria-hidden="true"></i>
+					<!-- <p>github.com/kurtisdcalkins</p> -->
+				</div>
+			</div>
+		</div>
+		<div class="name-city">
+			<h1>Kurtis Calkins</h1>
+			<p>Northglenn, CO</p>
+		</div>
+	</header>
+	<main class="main">
+		<section class="main-content">
+			<div class="division" id="about-me">
+				<h2>About Me</h2>
+				<p>Hello! I am Kurtis and I am from Colorado (North Metro-Denver). I have a BS in Mechanical Engineering from
+					the University of Colorado at Denver. I have worked as a manufacturing engineer, primarily in the medical
+					device industry, since 2015. </p>
+				<p>I am looking to switch careers into software development. Programming has intrigued me for years. With a few
+					of the software projects I've been able to work on throughout my career piqueing my interest and excitement, I
+					have decided to persue software development.</p>
+				<p>The goals of this website are to display my work and demonstrate some of the skills I have learned.</p>
+			</div>
+			<div class="division" id="programming-skills">
+				<h2>Programming Skills</h2>
+				<div class="each-programming-skill">
+					<div class="each-skill">
+						<i class="fa-brands fa-html5"></i>
+						<p>HTML</p>
+					</div>
+					<div class="each-skill">
+						<i class="fa-brands fa-css3-alt"></i>
+						<p>CSS</p>
+					</div>
+					<div class="each-skill">
+						<i class="fa-brands fa-js"></i>
+						<p>JavaScript</p>
+					</div>
+					<div class="each-skill">
+						<i class="fa-brands fa-git-alt"></i>
+						<p>Git</p>
+					</div>
+					<div class="each-skill">
+						<i class="fa-brands fa-github-square"></i>
+						<p>GitHub</p>
+					</div>
+					<div class="each-skill">
+						<i class="fa-brands fa-react"></i>
+						<p>React</p>
+					</div>
+					<div class="each-skill">
+						<i class="fa-brands fa-python"></i>
+						<p>Python</p>
+					</div>
+					<div class="each-skill">
+						<i class="fa-solid fa-database"></i>
+						<p>SQL</p>
+					</div>
+				</div>
+			</div>
+			<div class="division" id="other-skills">
+				<h2>Professional Skills</h2>
+				<div class="each-other-skill">
+					<div class="other-skill">
+						<h3>Management</h3>
+						<ul>
+							<li>Project Management</li>
+							<li>Team Management</li>
+							<li>Gantt Charts</li>
+							<li>Kan-Ban</li>
+							<li>Performance Reviews</li>
+							<li>Lean Manufacturing</li>
+						</ul>
+					</div>
+					<div class="other-skill">
+						<h3>Engineering</h3>
+						<ul>
+							<li>Technical Writing</li>
+							<li>CAD/Design</li>
+							<li>Lean Manufacturing</li>
+							<li>Design of Experiments (DOE)</li>
+							<li>Non-device Software Validation</li>
+							<li>Statistics: Gauge R&R </li>
+						</ul>
+					</div>
+					<div class="other-skill">
+						<h3>Validations / Qualifictions</h3>
+						<ul>
+							<li>Master Validation Plans (MVP)</li>
+							<li>Non-device Software Validation</li>
+							<li>Equipment Qualifications</li>
+							<li>Process Validation</li>
+							<li>Measurement System Analysis (MSA)</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="division" id="projects">
+				<h2>Projects</h2>
+				<div class="each-project-div">
+					<div class="each-project">
+						<img src="./Images/Gsuite-logo.png" alt="" width="200">
+						<div class="project-details">
+							<h3>Project 1</h3>
+							<p>This is the description. Give high-level overview. Then give a link to see more.</p>
+						</div>
+					</div>
+					<div class="each-project">
+						<img src="./Images/Gsuite-logo.png" alt="" width="200">
+						<div class="project-details">
+							<h3>Project 2</h3>
+							<p>This is the description. Give high-level overview. Then give a link to see more.</p>
+						</div>
+					</div>
+					<div class="each-project">
+						<img src="./Images/Gsuite-logo.png" alt="" width="200">
+						<div class="project-details">
+							<h3>Project 3</h3>
+							<p>This is the description. Give high-level overview. Then give a link to see more.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="picture">
+			<div class="profile">
+				<img class="profile-pic" src="./Images/Profile_pic.jpg" alt="My picture">
+			</div>
+			<div class="fade"></div>
+		</section>
+	</main>
+
+	<!-- <footer>
+            <p>Footer Section</p>
+        </footer> -->
+	<script src="" async defer></script>
+</body>
+
 </html>
