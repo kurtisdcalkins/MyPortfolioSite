@@ -28,13 +28,16 @@ section::-webkit-scrollbar {
 	--lightest: #F7DDD4;
 	--pink: hsl(0, 100%, 65%);
 	--head-height: 8vh;
+	--side-margin: 5rem;
 }
 
 html {
 	font-size: 16px;
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 	position: fixed;
-	background-image: linear-gradient(to top, hsl(0, 0%, 20%), black);
+	background-color: var(--lightest);
+	/* background-image: linear-gradient(to top, hsl(0, 0%, 20%), black); */
+	transition: all 0.6s;
 }
 
 
@@ -47,6 +50,30 @@ html {
 
 	50% {
 		opacity: .5;
+	}
+}
+
+@keyframes name-in {
+	0% {
+		opacity: 0;
+	}
+	
+	50% {
+		opcaity: .8;
+		/* color: var(--dark); */
+	}
+
+	80% {
+		opacity: .7;
+		transform: scale(1.1) rotate(45deg) translateY(-4px);
+	}
+
+	90% {
+		transform: scale(1.2) rotate(45deg) translateY(0px);
+	}
+
+	100% {
+		transform: scale(1) rotate(45deg) translateY(0px);
 	}
 }
 
@@ -80,6 +107,23 @@ html {
 	}
 }
 
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+		transform: translateX(0rem);
+	}
+	
+	/* 50% {
+		opacity: .5;
+		transform: translateX(.1rem);
+	} */
+	
+	100% {
+		transform: translateX(0rem);
+		opacity: 1;
+	}
+}
+
 
 
 /* --- header --- */
@@ -94,12 +138,13 @@ header {
 
 
 .name {
-	font-size: 1rem;
+	font-size: 1.5rem;
 	font-weight: bold;
+	animation: name-in 2s 2s backwards;
 	transform: rotate(45deg);
 	position: fixed;
 	top: 94px;
-	right: 9.5rem;
+	right: calc(var(--side-margin) - .5rem);
 	text-align: center;
 	opacity: 0.9;
 	color: white;
@@ -124,7 +169,21 @@ header {
 	display: flex;
 	flex-direction: row;
 	transition: .4s;
+}
+
+.contact-details:nth-child(1) {
+	animation: links-in 2.2s 0.6s backwards;
+
+}
+
+.contact-details:nth-child(2) {
+	animation: links-in 1.6s 0.6s backwards;
+
+}
+
+.contact-details:nth-child(3) {
 	animation: links-in 1s 0.6s backwards;
+
 }
 
 .contact-details:hover {
@@ -145,11 +204,11 @@ header {
 
 
 /* ----- Main Content Layout ----- */
-main {
+.main {
 	text-align: center;
 	display: grid;
 	grid-template-columns: 3fr 2fr;
-	margin: 0 10rem;
+	margin: 0 var(--side-margin);
 	height: calc(100vh - var(--head-height));
 	animation: main-in 0.6s backwards;
 	border-radius: 12px 50px 0 0;
@@ -160,11 +219,14 @@ main {
 
 
 
+
 /* ---- Picture ---- */
 .picture {
+	animation: main-in 0.6s backwards;
 	width: 100%;
 	height: calc(100vh - var(--head-height));
 	background-color: var(--mid);
+	transition: all 0.6s;
 }
 
 .profile-pic {
@@ -177,13 +239,15 @@ main {
 }
 
 .fade {
+	animation: fade-in 5s backwards;
 	height: calc(100vh - var(--head-height));
 	width: 100%;
 	position: absolute;
 	top: var(--head-height);
-	background-image: linear-gradient(to top, hsla(0, 0%, 10%, .9), transparent);
+	right: 5rem;
+	background-image: linear-gradient(to top left, hsla(0, 0%, 10%, 1),transparent,  transparent);
 	pointer-events: none;
-	transition: all 0.6s;
+	/* transition: all 0.6s; */
 	margin-bottom: 0;
 }
 
