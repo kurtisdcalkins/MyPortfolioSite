@@ -26,7 +26,8 @@ section::-webkit-scrollbar {
 	--mid: #448D76;
 	--light: #093426;
 	--lightest: #F7DDD4;
-	;
+	--pink: hsl(0, 100%, 65%);
+	--head-height: 8vh;
 }
 
 html {
@@ -88,28 +89,22 @@ header {
 	justify-content: space-between;
 	padding: 1rem;
 	align-items: center;
-	height: 10vh;
+	height: var(--head-height);
 }
 
-h1 {
-	font-size: 1.7rem;
+
+.name {
+	font-size: 1rem;
 	font-weight: bold;
 	transform: rotate(45deg);
 	position: fixed;
-	top: 115px;
-	right: 160px;
-}
-
-.name-city {
-	margin-right: 12rem;
+	top: 94px;
+	right: 9.5rem;
 	text-align: center;
 	opacity: 0.9;
 	color: white;
 }
 
-.name-city>p {
-	font-size: 1.25rem;
-}
 
 .contact {
 	margin-left: 15rem;
@@ -117,10 +112,6 @@ h1 {
 	text-align: center;
 }
 
-.contact>h2 {
-	color: var(--light);
-	font-size: 2rem;
-}
 
 .contact-info {
 	display: flex;
@@ -149,13 +140,6 @@ h1 {
 
 
 
-text {
-	fill: white;
-}
-
-path {
-	fill: transparent;
-}
 
 
 
@@ -166,7 +150,7 @@ main {
 	display: grid;
 	grid-template-columns: 3fr 2fr;
 	margin: 0 10rem;
-	height: 90vh;
+	height: calc(100vh - var(--head-height));
 	animation: main-in 0.6s backwards;
 	border-radius: 12px 50px 0 0;
 	overflow: hidden;
@@ -179,26 +163,24 @@ main {
 /* ---- Picture ---- */
 .picture {
 	width: 100%;
-	height: 90vh;
+	height: calc(100vh - var(--head-height));
 	background-color: var(--mid);
 }
 
 .profile-pic {
-	border-radius: 0 250px 0 0;
+	border-radius: 0 280px 0 0;
 	object-fit: cover;
 	object-position: right;
 	overflow: hidden;
 	width: 100%;
-	height: 90vh;
-	/* clip-path: polygon(36% 0, 100% 100%, 099%, 0 31%);
-	background-size: cover; */
+	height: calc(100vh - var(--head-height));
 }
 
 .fade {
-	height: 88vh;
+	height: calc(100vh - var(--head-height));
 	width: 100%;
 	position: absolute;
-	top: 12vh;
+	top: var(--head-height);
 	background-image: linear-gradient(to top, hsla(0, 0%, 10%, .9), transparent);
 	pointer-events: none;
 	transition: all 0.6s;
@@ -211,10 +193,8 @@ main {
 
 /* ---- Tabs ---- */
 .main-content {
-	overflow: scroll;
-	/* padding: 0 2rem; */
+	overflow: hidden;
 	color: var(--lightest);
-	/* color: orange; */
 	background-color: var(--mid);
 	transition: 0.6s;
 }
@@ -278,6 +258,7 @@ main h2 {
 	font-size: 1.7rem;
 	text-align: center;
 	margin: 2rem 0;
+	padding: 2rem;
 }
 
 .where-how > p {
@@ -288,32 +269,30 @@ main h2 {
 
 
 
-/* ----- Programming Skills ----- */
-.each-programming-skill,
-.each-other-skill,
-.each-project-div {
-	display: flex;
-	justify-content: space-between;
-	padding: 1rem 0;
+/* ----- Skills ----- */
+/* --- Programming Skills --- */
+.programming-skill {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1rem 2rem;
 }
 
 .each-skill {
 	padding: .5rem 1rem;
-	background-color: hsla(0, 0%, 76%, 1);
-	color: hsl(208, 100%, 17%);
-	border: 1px solid black;
+	background-color: var(--lightest);
+	color: var(--pink);
+	/* border: 1px solid black; */
 	border-radius: 5px;
 	font-weight: bold;
-	box-shadow: inset 0px 0px 4px;
+	margin-top: 0.5rem;
+	font-size: 2rem;
+	/* box-shadow: inset 0px 0px 10px; */
 }
 
-.fa-brands,
-.fa-solid {
-	font-size: 2rem;
-}
 
 .each-skill>p {
 	margin: .5rem 0;
+	font-size: 1rem;
 }
 
 
@@ -321,20 +300,30 @@ main h2 {
 
 
 /* ----- Professional Skills ----- */
-.other-skill {
-	width: 30%;
-	padding: 0 .5rem .5rem;
-	background-color: hsla(0, 0%, 76%, 1);
-	color: hsl(208, 100%, 17%);
-	border: 1px solid black;
+#prof-skills {
+	margin-top: 2rem;
+}
+
+.prof-skills {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem 2rem;
+}
+
+.prof-skill {
+	padding: .75rem;
+	background-color: var(--lightest);
+	color: var(--pink);
+	/* border: 1px solid black; */
 	border-radius: 5px;
-	box-shadow: inset 0px 0px 4px;
+	/* box-shadow: inset 0px 0px 10px; */
 	text-align: left;
 }
 
 h3 {
 	font-weight: bold;
 	margin: .5rem auto;
+	text-align: center;
 }
 
 li {
