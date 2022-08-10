@@ -9,7 +9,6 @@ function openDivision(event, divisionName) {
       tablinks[i].className = tablinks[i].className.replace(" active", " ");
     }
     document.getElementById(divisionName).style.display = 'inherit';
-    document.getElementById(divisionName).style.transitionDelay = '0.6s';
     event.currentTarget.className += " active";
 }
 
