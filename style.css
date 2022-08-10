@@ -20,12 +20,12 @@ section::-webkit-scrollbar {
 
 /* ---- HTML ---- */
 :root {
-	--darkest: #093426;
+	--darkest: hsl(160, 67%, 12%);
 	/* --dark: #012998; */
 	--dark: #FD4D0C;
 	--mid: #448D76;
 	--light: #093426;
-	--lightest: #F7DDD4;
+	--lightest: hsl(15, 69%, 90%);
 	--pink: hsl(0, 100%, 65%);
 	--head-height: 5vh;
 }
@@ -97,6 +97,16 @@ html {
 	}
 }
 
+@keyframes waivy {
+	0%,40%,100% {
+	  /* transform: translateY(0) */
+	}
+	20% {
+	  /* transform: rotateY(180deg); */
+	  color: var(--dark);
+	}
+}
+
 
 
 /* --- header --- */
@@ -104,7 +114,7 @@ header {
 	/* margin: 1vh 4rem 0; */
 	display: flex;
 	justify-content: space-between;
-	padding: 1rem;
+	padding: 2rem 0 2rem 6rem;
 	align-items: center;
 	height: var(--head-height);
 }
@@ -117,6 +127,14 @@ header {
 	opacity: 0.9;
 	color: var(--lightest);
 	animation: name-in 2s 1s backwards;
+}
+
+
+.waivy span {
+	display: inline-block;
+	animation: waivy 4s 3s infinite;
+	animation-delay: calc(.1s * var(--i));
+	position: relative;
 }
 
 
@@ -188,7 +206,7 @@ main {
 	overflow: hidden;
 	width: 100%;
 	height: calc(100vh - var(--head-height));
-	/* z-index: -1; */
+	opacity: .8;
 }
 
 .fade {
@@ -223,11 +241,12 @@ main {
 
 .tab {
 	overflow: hidden;
-	width: 120%;
+	width: 100%;
 	text-align: left;
-	background-color: var(--light);
-	border-radius: 0 20px 20px 0;
+	/* background-color: var(--darkest); */
+	background-image: linear-gradient(to right, hsl(160, 67%, 7%), var(--darkest));
 }
+
 
 .tab button {
 	height: 3rem;
@@ -235,7 +254,9 @@ main {
 	transition: all 0.4s ease-out;
 	font-size: 1.5rem;
 	color: var(--lightest);
+	text-shadow: -1px -1px 1px;
 }
+
 
 .tab button:hover {
 	cursor: pointer;
@@ -264,6 +285,7 @@ main h2 {
 	font-size: 2rem;
 	font-weight: bold;
 	margin-bottom: 1rem;
+	text-shadow: -1px -1px 1px;
 }
 
 
@@ -276,17 +298,33 @@ main h2 {
 	margin: 0 3rem;
 	text-align: left;
 	opacity: .9;
+	text-shadow: -1px -1px 1px;
 }
 
 .who {
-	font-size: 1.7rem;
+	font-size: 2.4rem;
 	text-align: center;
-	margin: 2rem 0;
+	margin: 1rem 0 2rem;
 	padding: 2rem;
+	transition: 0.9s;
 }
 
-.where-how > p {
-	margin-bottom: 2rem;
+.who:hover {
+	transform: scale(1.1);
+}
+
+article > p {
+	text-shadow: 0 -1px 1px;
+	letter-spacing: .1rem;
+}
+
+article {
+	transition: 1s;
+	margin-bottom: 3rem;
+}
+
+article:hover {
+	transform: scale(1.1);
 }
 
 
@@ -295,11 +333,20 @@ main h2 {
 
 /* ----- Skills ----- */
 /* --- Programming Skills --- */
+#skills > * {
+	transition: 1s;
+}
+
+#skills > *:hover {
+	transform: scale(1.03);
+}
+
 .programming-skill {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 1rem 2rem;
 }
+
 
 .each-skill {
 	padding: .5rem 1rem;
@@ -309,16 +356,23 @@ main h2 {
 	border-radius: 5px;
 	font-weight: bold;
 	/* box-shadow: inset 0px 0px 10px; */
+	transition: .5s;
+}
+
+.each-skill:hover {
+	transform: scale(1.06);
 }
 
 .fa-brands,
 .fa-solid {
 	margin-top: .5rem;
 	font-size: 2rem;
+	text-shadow: -1px -1px 1px;
 }
 
 .each-skill>p {
 	margin: .5rem 0;
+	text-shadow: -1px -1px 2px;
 }
 
 
@@ -350,6 +404,7 @@ h3 {
 	font-weight: bold;
 	margin: .5rem auto;
 	text-align: center;
+	text-shadow: -1px -1px 1px;
 }
 
 li {
@@ -357,6 +412,7 @@ li {
 	margin-left: 1.5rem;
 	font-size: .85rem;
 	line-height: 1.25rem;
+	text-shadow: 0px -1px 1px;
 }
 
 
