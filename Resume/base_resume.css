@@ -1,0 +1,125 @@
+
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    box-sizing: border-box;    
+}
+
+
+/* Setup */
+html {
+    max-width: 8.5in;
+    max-height: 11in;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    background-image: url('../projects/FrontEndProjects/MyPortfolioSite/Images/BG1-JhH160.jpg');
+    background-size: cover;
+    /* box-shadow: 0px 0px 30px 30px; */
+}
+
+
+
+/* ----------------------------- */
+/* Main Section */
+.physical-resume {
+    display: flex;
+}
+
+.name-title, .side h3 {
+    background-color: hsl(219, 85%, 46%);
+}
+
+/* Side section */
+.name-title {
+    width: 3in;
+    padding: .25in;
+    /* margin-bottom: .15in; */
+    margin-top: 0;
+    text-align: center;
+    color: white;
+}
+
+.side {
+    width: 3in;
+    background-color: hsl(219, 86%, 86%);
+    text-align: left;
+    color: #333
+}
+
+#contact, #skills, #education, #about-me {
+    padding: .25in .25in 0 .25in;
+}
+
+.side div {
+    /* padding-bottom: .25in; */
+    line-height: 28px;
+}
+
+.side h3 {
+    color: #eee;
+    padding: .1in 0 .1in .2in;
+    margin-left: -.25in;
+    margin-bottom: .1in;
+    width: 3in;
+}
+
+
+#education-frontrange, #education-ucd {
+    padding-top: .1in;
+}
+
+#education p {
+    font-size: 13px;
+    line-height: 20px;
+    padding-left: 10px;
+}
+
+#education h4 {
+    font-size: 14px;
+    
+}
+
+
+/* Experience Section */
+.experience {
+    text-align: left;
+    padding-left: .15in;
+    padding-top: .55in;
+    align-content: center;
+    width: 5.5in;
+    background-color: hsl(219, 86%, 95%);
+    color: #333
+}
+
+#projects {
+    margin-bottom: .25in;
+}
+
+ul {
+    margin: .1in 0 .15in .35in;
+    font-size: 14px;
+}
+
+.dates {
+    font-size: 14px;
+    font-style: italic;
+}
+
+#prof-experience h4, .dates {
+    margin-left: 10px;
+}
+
+.experience h2 {
+    color: black;
+    border-bottom: 1px solid black;
+    margin-bottom: 15px;
+}
+
+span {
+    font-size: 16px;
+    color: #666
+}

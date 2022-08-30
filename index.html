@@ -41,10 +41,10 @@
 	<main class="main">
 		<section class="main-content">
 			<div class="tab">
-				<button class="tablinks" onclick="openDivision(event,'about-me')" id="defaultOpen">About Me</button>
-				<button class="tablinks" onclick="openDivision(event,'skills')">Skills</button>
-				<button class="tablinks" onclick="openDivision(event,'projects')">Projects</button>
-				<button class="tablinks" onclick="openDivision(event,'resume')">Resume</button>
+				<button class="tablinks" onclick="openDivision(event,'about-me')" id="defaultOpen"> <span class="tab-text">About Me</span></button>
+				<button class="tablinks" onclick="openDivision(event,'skills')"><span class="tab-text">Skills</span></button>
+				<button class="tablinks" onclick="openDivision(event,'projects')"><span class="tab-text">Projects</span></button>
+				<button class="tablinks" onclick="openDivision(event,'resume')"><span class="tab-text">Resume</span></button>
 			</div>
 			<div class="division" id="about-me">
 				<p class="who">
@@ -71,35 +71,35 @@
 					<h2>Programming Skills</h2>
 					<div class="programming-skill">
 						<div class="each-skill">
-							<i class="fa-brands fa-html5"></i>
+							<i class="fa-brands fa-html5 skill-icon"></i>
 							<p>HTML</p>
 						</div>
 						<div class="each-skill">
-							<i class="fa-brands fa-css3-alt"></i>
+							<i class="fa-brands fa-css3-alt skill-icon"></i>
 							<p>CSS</p>
 						</div>
 						<div class="each-skill">
-							<i class="fa-brands fa-js"></i>
+							<i class="fa-brands fa-js skill-icon"></i>
 							<p>JavaScript</p>
 						</div>
 						<div class="each-skill">
-							<i class="fa-brands fa-git-alt"></i>
-							<p>Git</p>
-						</div>
-						<div class="each-skill">
-							<i class="fa-brands fa-github-square"></i>
-							<p>GitHub</p>
-						</div>
-						<div class="each-skill">
-							<i class="fa-brands fa-react"></i>
+							<i class="fa-brands fa-react skill-icon"></i>
 							<p>React</p>
 						</div>
 						<div class="each-skill">
-							<i class="fa-brands fa-python"></i>
+							<i class="fa-brands fa-git-alt skill-icon"></i>
+							<p>Git</p>
+						</div>
+						<div class="each-skill">
+							<i class="fa-brands fa-github-square skill-icon"></i>
+							<p>GitHub</p>
+						</div>
+						<div class="each-skill">
+							<i class="fa-brands fa-python skill-icon"></i>
 							<p>Python</p>
 						</div>
 						<div class="each-skill">
-							<i class="fa-solid fa-database"></i>
+							<i class="fa-solid fa-database skill-icon"></i>
 							<p>SQL</p>
 						</div>
 					</div>
@@ -156,32 +156,52 @@
 			</div>
 			<div class="division" id="projects">
 				<h2>Projects</h2>
-				<div class="each-project-div">
-					<div class="each-project">
-						<img src="./Images/Gsuite-logo.png" alt="" width="200">
-						<div class="project-details">
-							<h3>Project 1</h3>
-							<p>This is the description. Give high-level overview. Then give a link to see more.</p>
+				<div class="project-div">
+					<a href="./Projects Pages/Task List App/task_list.html">
+
+						<div class="each-project">
+							<div class="project-details">
+								<h3>Task List App</h3>
+								<p>This is the description. Give high-level overview. Then give a link to see more.</p>
+							</div>
+							<img src="./Images/Task List_img.png" alt="Screenshot of my task list app" class="grid-img">
 						</div>
-					</div>
-					<div class="each-project">
-						<img src="./Images/Gsuite-logo.png" alt="" width="200">
-						<div class="project-details">
-							<h3>Project 2</h3>
-							<p>This is the description. Give high-level overview. Then give a link to see more.</p>
+					</a>
+					<a href="">
+						<div class="each-project">
+
+							<div class="project-details">
+								<h3>Trip Logger</h3>
+								<p>This is the description. Give high-level overview. Then give a link to see more.</p>
+							</div>
+							<img src="./Images/Trip Logger_img.png" alt="" class="grid-img" >
 						</div>
-					</div>
-					<div class="each-project">
-						<img src="./Images/Gsuite-logo.png" alt="" width="200">
-						<div class="project-details">
-							<h3>Project 3</h3>
-							<p>This is the description. Give high-level overview. Then give a link to see more.</p>
+					</a>
+					<a href="">
+
+						<div class="each-project">
+							<div class="project-details">
+								<h3>Project 3</h3>
+								<p>This is the description. Give high-level overview. Then give a link to see more.</p>
+							</div>
+							<img src="./Images/Task List_img.png" alt="Screenshot of my task list app" class="grid-img">
 						</div>
-					</div>
+					</a>
+					<a href="">
+
+						<div class="each-project">
+							<div class="project-details">
+								<h3>Project 3</h3>
+								<p>This is the description. Give high-level overview. Then give a link to see more.</p>
+							</div>
+							<img src="./Images/Task List_img.png" alt="Screenshot of my task list app" class="grid-img">
+						</div>
+					</a>
+						
 				</div>
 			</div>
 			<div class="division" id="resume">
-
+				<iframe src="./Resume/base_resume.html" frameborder="0" height="810" width="850"></iframe>
 			</div>
 		</section>
 		<section class="picture">
@@ -191,13 +211,19 @@
 			<div class="strip">
 				<div class="contact-info">
 					<div class="contact-details">
-						<i class="fa fa-envelope-square" aria-hidden="true"></i>
+						<a href="mailto: kurtiscalkins@yahoo.com">
+							<i class="fa fa-envelope-square" aria-hidden="true"></i>
+						</a>
 					</div>
 					<div class="contact-details">
-						<i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+						<a href="https://www.linkedin.com/in/kurtis-calkins/" target="_blank">
+							<i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+						</a>
 					</div>
 					<div class="contact-details">
-						<i class="fa fa-github" aria-hidden="true"></i>
+						<a href="https://github.com/kurtisdcalkins"  target="_blank">
+							<i class="fa fa-github" aria-hidden="true"></i>
+						</a>
 					</div>
 				</div>
 			</div>
